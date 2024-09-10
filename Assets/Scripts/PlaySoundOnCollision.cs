@@ -24,6 +24,7 @@ public class PlaySoundOnCollision : MonoBehaviour
             GameObject audioSourceObject = new GameObject(name+" AudioSource_" + i);
             audioSourcePool[i] = audioSourceObject.AddComponent<AudioSource>();
             audioSourcePool[i].playOnAwake = false;
+            audioSourcePool[i].spatialBlend = 1.0f;
             audioSourcePool[i].minDistance = minDistance;
             audioSourcePool[i].maxDistance = maxDistance;
         }
