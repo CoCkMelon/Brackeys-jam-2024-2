@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: 8856233cf2d662cd9a200b73243e95dd
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sutr09
+    second: {fileID: 2100000, guid: 078bf7d5f6db229a79e663d152e79a54, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
