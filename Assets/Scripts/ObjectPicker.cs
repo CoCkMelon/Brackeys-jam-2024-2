@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class ObjectPicker : MonoBehaviour
 {
+    float throwForce = 600;
     public GameObject handle; // Assign in the inspector
     private GameObject pickedObject;
     private HingeJoint joint;
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            DropObject();
+            pickedObject.GetComponent<Rigidbody>().AddForce(transform.forward * throwForce);
+        }
         // Check if the left mouse button is pressed
         if (Input.GetMouseButtonDown(0))
         {
