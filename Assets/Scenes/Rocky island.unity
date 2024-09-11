@@ -1127,7 +1127,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -2105,7 +2105,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a766d432051948486882f6c0b5173fe0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6890,6 +6890,7 @@ GameObject:
   - component: {fileID: 1812473341}
   - component: {fileID: 1812473340}
   - component: {fileID: 1812473339}
+  - component: {fileID: 1812473345}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -6905,7 +6906,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812473338}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -7025,12 +7026,29 @@ Transform:
   m_GameObject: {fileID: 1812473338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 464.1, y: 8.1, z: 4991}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 463.5, y: -6.3, z: 4942.7}
+  m_LocalScale: {x: 1, y: 1, z: 12.16}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1812473345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812473338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d49d859994fdc699de9825142fd32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fluidDensity: 1000
+  objectDensity: 500
+  fluidViscosity: 100000000
+  waterLevel: 0
+  force_multiplier: 0.000001
 --- !u!1001 &1819370909
 PrefabInstance:
   m_ObjectHideFlags: 0
