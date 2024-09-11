@@ -8,6 +8,8 @@ TagManager:
   - Axe
   - Rock
   - Water
+  tags:
+  - EyeLevel
   layers:
   - Default
   - TransparentFX
