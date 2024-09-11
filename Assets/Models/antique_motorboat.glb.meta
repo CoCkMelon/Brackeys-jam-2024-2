@@ -1,0 +1,118 @@
+fileFormatVersion: 2
+guid: 2a345c6bc42c6407bacb915c37d7d245
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Details
+    second: {fileID: 2100000, guid: 80a5ef6cd4ca20993824726e6baa227d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engine_helm
+    second: {fileID: 2100000, guid: d1cfa95bda2df58b8a9f8eea8119e96f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hull
+    second: {fileID: 2100000, guid: 8d2d45ec38515d1578d137041efc035d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel_Lantern
+    second: {fileID: 2100000, guid: 9c85e071db01d3569ade624ec85e3525, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 10
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 1
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _texturesReadWriteEnabled: 0
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: 100
+  optimizeGameObjects: 0
+  materials:
+  - {fileID: -9127452890566124891, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: -3388865127288387425, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: -3303489080311633890, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: -7678293827424125119, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  textures:
+  - {fileID: 6983701643236107813, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: 8022499087761476943, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: 5230624929818990856, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: -2834534249764746836, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: -409340629399409755, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: -6477806308458343453, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: 6960455510609624210, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: 150502026991701941, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: 2933329333178083999, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: -22660439024615302, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: -809988167731686972, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  - {fileID: 5743815331122784290, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 1
+  animations: []
+  _extensions: []
+  _textures:
+  - texture: {fileID: 6983701643236107813, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 8022499087761476943, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 5230624929818990856, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: -2834534249764746836, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: -409340629399409755, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: -6477806308458343453, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: 6960455510609624210, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 150502026991701941, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2933329333178083999, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: -22660439024615302, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: -809988167731686972, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 5743815331122784290, guid: 2a345c6bc42c6407bacb915c37d7d245, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  _mainAssetIdentifier: scenes/Sketchfab_Scene
+  _importPlugins: []
