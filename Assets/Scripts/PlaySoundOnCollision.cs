@@ -43,6 +43,8 @@ public class PlaySoundOnCollision : MonoBehaviour
         } else if (collision.gameObject.CompareTag(gameObject.tag))
         {
             PlaySoundAtPoint(similarObjectCollisionSound, collision.transform.position, collisionForce);
+        } else {
+            PlaySoundAtPoint(similarObjectCollisionSound, collision.transform.position, collisionForce);
         }
     }
 

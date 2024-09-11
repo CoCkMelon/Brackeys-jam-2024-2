@@ -1059,7 +1059,6 @@ GameObject:
   - component: {fileID: 984509894}
   - component: {fileID: 984509893}
   - component: {fileID: 984509896}
-  - component: {fileID: 984509898}
   - component: {fileID: 984509897}
   m_Layer: 2
   m_Name: Main Camera
@@ -1164,12 +1163,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984509891}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf7fd67818609dd1b9fe2bec917c4c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handle: {fileID: 566139}
+  HoldVertically: []
+  HoldHorizontally: []
 --- !u!114 &984509897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,22 +1215,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &984509898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984509891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f51ee0d31e44414b8045576aef88229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canHold: 1
-  item: {fileID: 0}
-  tempParent: {fileID: 984509891}
-  isHolding: 0
 --- !u!1 &1160234425
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,9 @@ public class ObjectPicker : MonoBehaviour
     public GameObject handle; // Assign in the inspector
     private GameObject pickedObject;
     private HingeJoint joint;
+    // Will be used for axe, knife to use them for chopping
+    public List<GameObject> HoldVertically;
+    public List<GameObject> HoldHorizontally;
 
     void Update()
     {
