@@ -10,6 +10,7 @@ TagManager:
   - Water
   tags:
   - EyeLevel
+  - Enemy
   layers:
   - Default
   - TransparentFX

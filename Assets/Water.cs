@@ -13,6 +13,10 @@ public class Water : MonoBehaviour
             movement = other.GetComponent<PlayerMovement>();
             movement.isSwimming = true;
         }
+        if (other.CompareTag("EyeLevel"))
+        {
+            movement.gravity = 0;
+        }
         
     }
 
