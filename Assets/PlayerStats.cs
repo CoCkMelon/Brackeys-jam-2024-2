@@ -81,4 +81,14 @@ public class PlayerStats : MonoBehaviour
             currentBreath = maxBreath;
         }
     }
+
+    public void RegainHealth(float health)
+    {
+        currentHealth += health;
+
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
 }

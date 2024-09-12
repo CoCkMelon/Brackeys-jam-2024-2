@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
             
             if(playerStats.currentBreath <= 0 && playerStats.currentHealth > 0)
             {
-                playerStats.TakeDamage(1 * Time.deltaTime);
+                playerStats.TakeDamage(10 * Time.deltaTime);
             }
 
         }
@@ -93,6 +93,11 @@ public class PlayerMovement : MonoBehaviour
         {
 
             playerStats.FreshAir(20);
+            if(playerStats.currentHealth < playerStats.maxHealth)
+            {
+                StartCoroutine(RecoverHealth());
+            }
+            
             if (isGrounded && velocity.y < 0)
             {
                 velocity.y = -2f;
@@ -143,6 +148,16 @@ public class PlayerMovement : MonoBehaviour
         while(playerStats.currentStamina < playerStats.maxStamina)
         {
             playerStats.RestoreStamina(100);
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+    private IEnumerator RecoverHealth()
+    {
+        yield return new WaitForSeconds(2f);
+
+        while (playerStats.currentHealth < playerStats.maxHealth)
+        {
+            playerStats.RegainHealth(5 * Time.deltaTime);
             yield return new WaitForSeconds(.1f);
         }
     }
