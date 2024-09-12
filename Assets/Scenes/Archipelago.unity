@@ -636,6 +636,7 @@ GameObject:
   - component: {fileID: 388652445}
   - component: {fileID: 388652444}
   - component: {fileID: 388652443}
+  - component: {fileID: 388652446}
   m_Layer: 2
   m_Name: First Person Player
   m_TagString: Player
@@ -652,20 +653,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 388652442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 810682e8c936d604f9412cb6a153dae9, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a938ee61e952ac55bf48d7d5214687b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 388652444}
+  playerStats: {fileID: 388652446}
   speed: 12
   sprintSpeed: 10
-  gravity: -19.62
+  gravity: -9.81
   jumpHeight: 3
   swimSpeed: 10
   groundCheck: {fileID: 1473761895}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 9
   target: {fileID: 566140}
   isSwimming: 0
 --- !u!143 &388652444
@@ -712,6 +714,24 @@ Transform:
   - {fileID: 1473761895}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &388652446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388652442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b15d9e884ddb284889bde46899ecb72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  maxStamina: 100
+  currentStamina: 100
+  maxBreath: 100
+  currentBreath: 100
 --- !u!1 &483402483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8128668236925612103, guid: be4263feaea9dbc61acdf152fe0a408f, type: 3}
