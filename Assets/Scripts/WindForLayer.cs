@@ -62,7 +62,7 @@ public class WindForLayer : MonoBehaviour
                     Vector3 windDirection = transform.forward.normalized;
 
                     // Apply wind force directly to the character controller's velocity
-                    cc.Move(windDirection * currentPulseForce * Time.deltaTime * 0.1f);
+                    cc.Move(windDirection * currentPulseForce * Time.deltaTime * 0.9f);
                 }
             }
         }

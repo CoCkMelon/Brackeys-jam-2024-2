@@ -31,6 +31,14 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
+
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        velocity.y += gravity * Time.deltaTime;
         if (isSwimming)
         {
             // Calculate movement direction
@@ -47,17 +55,25 @@ public class PlayerMovement : MonoBehaviour
 
             // Move the character using the CharacterController
             controller.Move(direction * movementSpeed * Time.deltaTime);
-            playerStats.LoseStamina(10);
+            if(transform.position.y < -2) {
 
-            // Update stamina and breath
-            if (playerStats.currentBreath > 0)
-            {
-                playerStats.RunOutOfBreath(5);
-            }
+                if(!isGrounded)
+                    playerStats.LoseStamina(10);
 
-            if (playerStats.currentBreath <= 0 && playerStats.currentHealth > 0)
-            {
-                playerStats.TakeDamage(10 * Time.deltaTime);
+                // Update stamina and breath
+                if (playerStats.currentBreath > 0)
+                {
+                    playerStats.RunOutOfBreath(5);
+                }
+
+                if (playerStats.currentBreath <= 0 && playerStats.currentHealth > 0)
+                {
+                    playerStats.TakeDamage(10 * Time.deltaTime);
+                }
+            } else {
+                playerStats.FreshAir(20);
+                if(!isGrounded)
+                    playerStats.LoseStamina(10);
             }
         }
         else
@@ -96,13 +112,6 @@ public class PlayerMovement : MonoBehaviour
                     StartCoroutine(RechargeStamina());
                 }
             }
-
-            if (Input.GetButtonDown("Jump") && isGrounded)
-            {
-                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            }
-
-            velocity.y += gravity * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
         }

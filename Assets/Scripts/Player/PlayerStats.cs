@@ -136,22 +136,5 @@ public class PlayerStats : MonoBehaviour
 
         // Restart the current scene
         SceneManager.LoadScene(currentScene.name);
-
-        // Start async loading of the additional scene
-        StartCoroutine(LoadAdditionalSceneAsync());
-    }
-
-    System.Collections.IEnumerator LoadAdditionalSceneAsync()
-    {
-        // Load the additional scene asynchronously
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(additionalSceneToLoad, LoadSceneMode.Additive);
-
-        // Wait until the additional scene is fully loaded
-        while (!asyncLoad.isDone)
-        {
-            yield return null;  // Wait for the next frame
-        }
-
-        Debug.Log("Additional scene loaded successfully.");
     }
 }
