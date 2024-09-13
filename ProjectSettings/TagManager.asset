@@ -10,6 +10,7 @@ TagManager:
   - Water
   - Water Volume
   - EyeLevel
+  - Tree
   layers:
   - Default
   - TransparentFX
