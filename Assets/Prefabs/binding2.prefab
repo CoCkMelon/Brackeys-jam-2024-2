@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3162757769038858303, guid: d7a3598449be591a693fd8191646f544, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 598443603848915907, guid: d7a3598449be591a693fd8191646f544, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
@@ -72,9 +76,21 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 1.0968333
       objectReference: {fileID: 0}
+    - target: {fileID: 4168583090274094839, guid: d7a3598449be591a693fd8191646f544, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5561390921020163781, guid: d7a3598449be591a693fd8191646f544, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8771091787928289351, guid: d7a3598449be591a693fd8191646f544, type: 3}
       propertyPath: m_Name
       value: binding2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771091787928289351, guid: d7a3598449be591a693fd8191646f544, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
