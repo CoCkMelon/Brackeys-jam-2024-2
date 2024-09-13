@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerStats : MonoBehaviour
     public int maxBreath = 100;
     public float currentBreath;
 
+    public string additionalSceneToLoad = "Rocky island";  // The name of the scene to be loaded asynchronously
     // Start is called before the first frame update
     void Start()
     {
@@ -23,18 +25,15 @@ public class PlayerStats : MonoBehaviour
         currentBreath = maxBreath;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-    }
 
     public void TakeDamage(float damage)
     {
-        if (currentHealth != 0)
+        if (currentHealth > 0)
         {
             currentHealth -= damage;
+        }
+        if (currentHealth <= 0){
+            RestartLevelAndLoadAdditionalScene();
         }
     }
 
@@ -90,5 +89,32 @@ public class PlayerStats : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+    }
+
+
+    void RestartLevelAndLoadAdditionalScene()
+    {
+        // Get the active scene (current level)
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // Restart the current scene
+        SceneManager.LoadScene(currentScene.name);
+
+        // Start async loading of the additional scene
+        StartCoroutine(LoadAdditionalSceneAsync());
+    }
+
+    System.Collections.IEnumerator LoadAdditionalSceneAsync()
+    {
+        // Load the additional scene asynchronously
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(additionalSceneToLoad, LoadSceneMode.Additive);
+
+        // Wait until the additional scene is fully loaded
+        while (!asyncLoad.isDone)
+        {
+            yield return null;  // Wait for the next frame
+        }
+
+        Debug.Log("Additional scene loaded successfully.");
     }
 }

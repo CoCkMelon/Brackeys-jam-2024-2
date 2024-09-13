@@ -30,74 +30,46 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        
+
         if (isSwimming)
         {
-           
-            if(Input.GetAxisRaw("Vertical") > 0)
-            {
-                if (Input.GetKey(KeyCode.LeftShift) && playerStats.currentStamina > 0)
-                {
-                    transform.position += target.forward * (swimSpeed + sprintSpeed) * Time.deltaTime;
-                }
-                else
-                {
-                    transform.position += target.forward * swimSpeed * Time.deltaTime;
-                }
+            // Calculate movement direction
+            Vector3 direction = target.forward * Input.GetAxisRaw("Vertical") + target.right * Input.GetAxisRaw("Horizontal");
+
+            // Apply movement speed based on sprinting and stamina
+            if (Input.GetKey(KeyCode.LeftShift) && playerStats.currentStamina > 0) {
+                playerStats.LoseStamina(10);
             }
-            if(Input.GetAxisRaw("Vertical") < 0)
-            {
-                if (Input.GetKey(KeyCode.LeftShift) && playerStats.currentStamina > 0)
-                {
-                    transform.position -= target.forward * (swimSpeed + sprintSpeed) * Time.deltaTime;
-                }
-                else
-                {
-                    transform.position -= target.forward * swimSpeed * Time.deltaTime;
-                }
+            float movementSpeed = (Input.GetKey(KeyCode.LeftShift) && playerStats.currentStamina > 0) ? sprintSpeed + swimSpeed : swimSpeed;
+            if(playerStats.currentStamina<=0) {
+                direction = (direction + Vector3.down).normalized;
             }
-            if (Input.GetAxisRaw("Horizontal") > 0)
+
+            // Move the character using the CharacterController
+            controller.Move(direction * movementSpeed * Time.deltaTime);
+            playerStats.LoseStamina(10);
+
+            // Update stamina and breath
+            if (playerStats.currentBreath > 0)
             {
-                if (Input.GetKey(KeyCode.LeftShift) && playerStats.currentStamina > 0)
-                {
-                    transform.position += target.right * (swimSpeed + sprintSpeed) * Time.deltaTime;
-                }
-                else
-                {
-                    transform.position += target.right * swimSpeed * Time.deltaTime;
-                }
+                playerStats.RunOutOfBreath(5);
             }
-            if (Input.GetAxisRaw("Horizontal") < 0)
-            {
-                if (Input.GetKey(KeyCode.LeftShift) && playerStats.currentStamina > 0)
-                {
-                    transform.position -= target.right * (swimSpeed + sprintSpeed) * Time.deltaTime;
-                }
-                else
-                {
-                    transform.position -= target.right * swimSpeed * Time.deltaTime;
-                }
-            }
-            if(playerStats.currentBreath > 0)
-            {
-                playerStats.RunOutOfBreath(10);
-            }
-            
-            if(playerStats.currentBreath <= 0 && playerStats.currentHealth > 0)
+
+            if (playerStats.currentBreath <= 0 && playerStats.currentHealth > 0)
             {
                 playerStats.TakeDamage(10 * Time.deltaTime);
             }
-
         }
         else
         {
-
+            // Update movement on land
             playerStats.FreshAir(20);
-            if(playerStats.currentHealth < playerStats.maxHealth)
+
+            if (playerStats.currentHealth < playerStats.maxHealth)
             {
                 StartCoroutine(RecoverHealth());
             }
-            
+
             if (isGrounded && velocity.y < 0)
             {
                 velocity.y = -2f;
@@ -108,13 +80,11 @@ public class PlayerMovement : MonoBehaviour
 
             Vector3 move = transform.right * x + transform.forward * z;
 
-
             if (Input.GetKey(KeyCode.LeftShift) && playerStats.currentStamina > 0)
             {
                 controller.Move(move * (speed + sprintSpeed) * Time.deltaTime);
                 if (move.x != 0 && move.z != 0 && isGrounded)
                 {
-                    
                     playerStats.LoseStamina(10);
                 }
             }
@@ -123,7 +93,6 @@ public class PlayerMovement : MonoBehaviour
                 controller.Move(move * speed * Time.deltaTime);
                 if (Input.GetKeyUp(KeyCode.LeftShift))
                 {
-                    
                     StartCoroutine(RechargeStamina());
                 }
             }
@@ -132,12 +101,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
-            
 
             velocity.y += gravity * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
-            
         }
     }
 
@@ -145,12 +112,13 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        while(playerStats.currentStamina < playerStats.maxStamina)
+        while (playerStats.currentStamina < playerStats.maxStamina)
         {
             playerStats.RestoreStamina(100);
             yield return new WaitForSeconds(.1f);
         }
     }
+
     private IEnumerator RecoverHealth()
     {
         yield return new WaitForSeconds(2f);

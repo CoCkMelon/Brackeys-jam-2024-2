@@ -5,19 +5,19 @@ using UnityEngine;
 public class ObjectPicker : MonoBehaviour
 {
     float throwForce = 600;
-    public GameObject handle; // Assign in the inspector
+    public GameObject handle; // Target of grip
+    public GameObject jointObject; // Center of grip
     private GameObject pickedObject;
     private HingeJoint joint;
-    // Will be used for axe, knife to use them for chopping
-    public List<GameObject> HoldVertically;
-    public List<GameObject> HoldHorizontally;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
-            DropObject();
-            pickedObject.GetComponent<Rigidbody>().AddForce(transform.forward * throwForce);
+            if (pickedObject != null) {
+                pickedObject.GetComponent<Rigidbody>().AddForce(transform.forward * throwForce);
+                DropObject();
+            }
         }
         // Check if the left mouse button is pressed
         if (Input.GetMouseButtonDown(0))
@@ -50,12 +50,12 @@ public class ObjectPicker : MonoBehaviour
                     // Increase the Spring and Damper values
                     JointSpring spring = joint.spring;
                     spring.targetPosition = 0;
-                    spring.spring = 1000;
+                    spring.spring = 10;
                     spring.damper = 10;
 
                     // Increase the Break Force and Break Torque values
-                    joint.breakForce = 10000;
-                    joint.breakTorque = 10000;
+                    joint.breakForce = 10;
+                    // joint.breakTorque = 1000000;
                 } else {
                     joint = handle.GetComponent<HingeJoint>();
                 }

@@ -8,9 +8,8 @@ TagManager:
   - Axe
   - Rock
   - Water
-  tags:
+  - Water Volume
   - EyeLevel
-  - Enemy
   layers:
   - Default
   - TransparentFX
