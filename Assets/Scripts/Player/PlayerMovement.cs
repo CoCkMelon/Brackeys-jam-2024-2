@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    private Rigidbody currentGroundRigidbody;
     public Transform target;
 
     Vector3 velocity;
@@ -31,6 +32,29 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
+        // if (isGrounded)
+        // {
+        //     // Check if grounded on a Rigidbody
+        //     RaycastHit hit;
+        //     if (Physics.Raycast(groundCheck.position, -transform.up, out hit, groundDistance + 0.1f, groundMask)) //Slight offset to ensure hit
+        //     {
+        //         currentGroundRigidbody = hit.collider.attachedRigidbody;
+        //     }
+        //     else
+        //     {
+        //         currentGroundRigidbody = null;
+        //     }
+        // }
+        // else
+        // {
+        //     currentGroundRigidbody = null;
+        // }
+        // // Apply platform velocity
+        // if (currentGroundRigidbody != null)
+        // {
+        //     Vector3 groundVelocity = currentGroundRigidbody.velocity;
+        //     controller.Move(groundVelocity * Time.deltaTime);
+        // }
 
 
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -43,6 +67,10 @@ public class PlayerMovement : MonoBehaviour
         {
             // Calculate movement direction
             Vector3 direction = target.forward * Input.GetAxisRaw("Vertical") + target.right * Input.GetAxisRaw("Horizontal");
+            if(direction.x < 0.001 && direction.x < 0.001 && direction.x < 0.001
+               && Physics.CheckSphere(groundCheck.position, groundDistance)) {
+                StartCoroutine(RechargeStamina());
+            }
 
             // Apply movement speed based on sprinting and stamina
             if (Input.GetKey(KeyCode.LeftShift) && playerStats.currentStamina > 0) {

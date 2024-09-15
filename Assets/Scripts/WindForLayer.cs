@@ -9,6 +9,7 @@ public class WindForLayer : MonoBehaviour
     public float pulseMagnitude = 5f; // Magnitude of the pulse
     public float pulseDuration = 1f; // Duration of the pulse (in seconds)
     public float phaseShift = 0f; // Phase shift for the pulse (in radians)
+    public float playerForceMul = 0.1f;
 
     private float pulseTimer = 0f; // Timer to keep track of pulse duration
 
@@ -56,13 +57,13 @@ public class WindForLayer : MonoBehaviour
                     Vector3 windDirection = transform.forward.normalized;
 
                     // Apply wind force directly to the character controller's velocity
-                    cc.Move(windDirection * currentPulseForce * Time.deltaTime);
+                    cc.Move(windDirection * currentPulseForce * Time.deltaTime * playerForceMul);
                 } else {
                     // Calculate the wind direction vector and normalize it
                     Vector3 windDirection = transform.forward.normalized;
 
                     // Apply wind force directly to the character controller's velocity
-                    cc.Move(windDirection * currentPulseForce * Time.deltaTime * 0.9f);
+                    cc.Move(windDirection * currentPulseForce * Time.deltaTime * 0.9f * playerForceMul);
                 }
             }
         }

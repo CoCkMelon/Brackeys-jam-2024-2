@@ -6,6 +6,7 @@ public class Grabber2 : MonoBehaviour
     [SerializeField] private float rotationSpeed = 100f; // Speed of rotation
     [SerializeField] private float moveSpeed = 1f; // Speed of grabPoint movement
     [SerializeField] float grabDistance = 5f;
+    [SerializeField] LayerMask grabMask;
 
     private GameObject grabbedObject;
 
@@ -118,7 +119,7 @@ public class Grabber2 : MonoBehaviour
     {
         RaycastHit hit;
         // Perform a raycast from the grabPoint forward
-        if (Physics.Raycast(grabPoint.position, grabPoint.forward, out hit, grabDistance))
+        if (Physics.Raycast(grabPoint.position, grabPoint.forward, out hit, grabDistance, grabMask))
         {
             Rigidbody rb = hit.transform.GetComponent<Rigidbody>();
             if (rb != null && !rb.isKinematic)

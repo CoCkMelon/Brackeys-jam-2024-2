@@ -11,4 +11,11 @@ public class AxeCollision : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Tree"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }

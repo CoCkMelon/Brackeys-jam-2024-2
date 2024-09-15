@@ -22,9 +22,6 @@ public class AttachableSpringUse : MonoBehaviour
     [Tooltip("LayerMask specifying which layers are considered attachable.")]
     [SerializeField] private LayerMask attachableLayerMask;
 
-    [Tooltip("Maximum number of attachment attempts per bone.")]
-    [SerializeField] private int maxAttachAttempts = 1;
-
     /// <summary>
     /// Dictionary to keep track of active joints for each bone.
     /// </summary>
@@ -75,33 +72,39 @@ public class AttachableSpringUse : MonoBehaviour
     /// </summary>
     public void UseItem()
     {
-        ToggleAttachment(bone1);
-        ToggleAttachment(bone2);
+        ToggleAttachment(bone1, bone2);
     }
 
     /// <summary>
-    /// Toggles the attachment state of a specified bone.
+    /// Toggles the attachment state of the specified bones.
     /// If the bone is attached, it detaches it. Otherwise, it attempts to attach it.
     /// </summary>
     /// <param name="bone">The Transform representing the attachment bone.</param>
-    private void ToggleAttachment(Transform bone)
+    private void ToggleAttachment(Transform bone1, Transform bone2)
     {
-        if (bone == null)
+        if (bone1 == null)
         {
-            Debug.LogWarning("Bone is not assigned.");
+            Debug.LogWarning("Bone1 is not assigned.");
+            return;
+        }
+        if (bone2 == null)
+        {
+            Debug.LogWarning("Bone2 is not assigned.");
             return;
         }
 
         // Check if the bone is already attached
-        if (activeJoints.ContainsKey(bone))
+        if (activeJoints.ContainsKey(bone1) || activeJoints.ContainsKey(bone2))
         {
             // Detach the bone
-            DetachBone(bone);
+            DetachBone(bone1);
+            DetachBone(bone2);
         }
         else
         {
             // Attempt to attach the bone
-            AttachToBone(bone);
+            AttachToBone(bone1);
+            AttachToBone(bone2);
         }
     }
 

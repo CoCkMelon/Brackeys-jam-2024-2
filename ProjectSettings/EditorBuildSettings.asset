@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/LEVEL 1.unity
     guid: 655d92829fadc9647af2de7bbaadda94
   - enabled: 1
+    path: Assets/Scenes/Big island.unity
+    guid: f353ca9075e55da768462e69b6bdb0b5
+  - enabled: 1
     path: Assets/Scenes/Rocky island.unity
     guid: b7ede2098709769218065918762687e9
+  - enabled: 1
+    path: Assets/Scenes/LAST LEVEL.unity
+    guid: 708bae4f865550146ae60a96d16c1451
   m_configObjects: {}

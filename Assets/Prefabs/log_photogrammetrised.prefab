@@ -260,6 +260,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4936824620777465771, guid: be4263feaea9dbc61acdf152fe0a408f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a623325bcbc9ad567849d2ebcef1ad77, type: 2}
     - target: {fileID: 8128668236925612103, guid: be4263feaea9dbc61acdf152fe0a408f, type: 3}
       propertyPath: m_Name
       value: log_photogrammetrised

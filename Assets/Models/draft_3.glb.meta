@@ -1,0 +1,59 @@
+fileFormatVersion: 2
+guid: a3a37214fb883b44fbca8f7392891c7b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 1
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _texturesReadWriteEnabled: 1
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  optimizeGameObjects: 0
+  materials:
+  - {fileID: -6478536213147159724, guid: a3a37214fb883b44fbca8f7392891c7b, type: 3}
+  - {fileID: -3846018093981099296, guid: a3a37214fb883b44fbca8f7392891c7b, type: 3}
+  - {fileID: 4874126678125670354, guid: a3a37214fb883b44fbca8f7392891c7b, type: 3}
+  - {fileID: -6922793697723135513, guid: a3a37214fb883b44fbca8f7392891c7b, type: 3}
+  - {fileID: -6629797300637803691, guid: a3a37214fb883b44fbca8f7392891c7b, type: 3}
+  - {fileID: -2813467912831258332, guid: a3a37214fb883b44fbca8f7392891c7b, type: 3}
+  - {fileID: -8274133419916619345, guid: a3a37214fb883b44fbca8f7392891c7b, type: 3}
+  - {fileID: -3522955778539423533, guid: a3a37214fb883b44fbca8f7392891c7b, type: 3}
+  - {fileID: 9185737683893222716, guid: a3a37214fb883b44fbca8f7392891c7b, type: 3}
+  textures: []
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 0
+  animations: []
+  _extensions:
+  - name: KHR_materials_transmission
+    supported: 1
+    used: 1
+    required: 0
+  _textures: []
+  _mainAssetIdentifier: scenes/Sketchfab_Scene
+  _importPlugins: []

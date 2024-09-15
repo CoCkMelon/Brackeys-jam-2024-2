@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="pause-menu-container" style="width: 100%; height: 100%; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.7); display: flex;">
+        <ui:VisualElement name="menu-items" style="padding: 15px; background-color: rgba(255, 255, 255, 0.1); border-radius: 10px; display: flex;">
+            <ui:Label text="Game Paused" class="menu-title" style="text-align: center; color: white; font-size: 24px; margin-bottom: 20px;" />
+            <ui:Label text="WASD to move, SPACE to jump,&#10;hold LMB to pick up item,&#10;E to use picked up item,&#10;MOUSE SCROLL move item by Z&#10;+X,Y,Z rotate item by axis" class="controls-text" style="text-align: center; color: white; font-size: 14px; margin-bottom: 20px; height: 93px; width: 222px;" />
+            <ui:Button text="Resume" name="resume-button" class="menu-button" style="margin-bottom: 10px;" />
+            <ui:Button text="Restart" name="restart-button" class="menu-button" style="margin-bottom: 10px;" />
+            <ui:Button text="Quit to Main Menu" name="quit-button" class="menu-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

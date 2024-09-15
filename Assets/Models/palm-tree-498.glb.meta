@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: ed6273f3d26e6ea64a5c8fdc74cf0920
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Palm
+    second: {fileID: 2100000, guid: a6e5c2ae7a59daeb9bdfac41cfc9e8f0, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -34,9 +39,9 @@ ScriptedImporter:
   _textureCompression: -50
   optimizeGameObjects: 0
   materials:
-  - {instanceID: 0}
+  - {fileID: -3569791527499258558, guid: ed6273f3d26e6ea64a5c8fdc74cf0920, type: 3}
   textures:
-  - {instanceID: 0}
+  - {fileID: -7465026572450366495, guid: ed6273f3d26e6ea64a5c8fdc74cf0920, type: 3}
   hasSceneData: 1
   hasAnimationData: 0
   hasMaterialData: 1
@@ -56,7 +61,7 @@ ScriptedImporter:
     used: 1
     required: 0
   _textures:
-  - texture: {instanceID: 0}
+  - texture: {fileID: -7465026572450366495, guid: ed6273f3d26e6ea64a5c8fdc74cf0920, type: 3}
     shouldBeLinear: 0
     shouldBeNormalMap: 0
   _mainAssetIdentifier: scenes/Scene

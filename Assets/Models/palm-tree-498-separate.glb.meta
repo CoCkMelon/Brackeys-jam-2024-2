@@ -9,9 +9,9 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
   _removeEmptyRootObjects: 1
-  _scaleFactor: 1
+  _scaleFactor: 0.01
   _maximumLod: 300
-  _readWriteEnabled: 1
+  _readWriteEnabled: 0
   _generateColliders: 0
   _swapUvs: 0
   _generateLightmapUVs: 0
@@ -34,11 +34,11 @@ ScriptedImporter:
   _textureCompression: -50
   optimizeGameObjects: 0
   materials:
-  - {instanceID: 0}
-  - {instanceID: 0}
-  - {instanceID: 0}
+  - {fileID: -4006148316881293267, guid: 23f0db759afa9c306aaa3506c0502149, type: 3}
+  - {fileID: -1987594970651809194, guid: 23f0db759afa9c306aaa3506c0502149, type: 3}
+  - {fileID: 6849546283596164469, guid: 23f0db759afa9c306aaa3506c0502149, type: 3}
   textures:
-  - {instanceID: 0}
+  - {fileID: -7465026572450366495, guid: 23f0db759afa9c306aaa3506c0502149, type: 3}
   hasSceneData: 1
   hasAnimationData: 0
   hasMaterialData: 1
@@ -58,13 +58,13 @@ ScriptedImporter:
     used: 1
     required: 0
   _textures:
-  - texture: {instanceID: 0}
+  - texture: {fileID: -7465026572450366495, guid: 23f0db759afa9c306aaa3506c0502149, type: 3}
     shouldBeLinear: 0
     shouldBeNormalMap: 0
-  - texture: {instanceID: 0}
+  - texture: {fileID: -7465026572450366495, guid: 23f0db759afa9c306aaa3506c0502149, type: 3}
     shouldBeLinear: 0
     shouldBeNormalMap: 0
-  - texture: {instanceID: 0}
+  - texture: {fileID: -7465026572450366495, guid: 23f0db759afa9c306aaa3506c0502149, type: 3}
     shouldBeLinear: 0
     shouldBeNormalMap: 0
   _mainAssetIdentifier: scenes/Scene

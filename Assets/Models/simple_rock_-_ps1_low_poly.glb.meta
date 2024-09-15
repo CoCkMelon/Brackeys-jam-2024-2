@@ -17,7 +17,7 @@ ScriptedImporter:
   _scaleFactor: 1
   _maximumLod: 300
   _readWriteEnabled: 1
-  _generateColliders: 0
+  _generateColliders: 1
   _swapUvs: 0
   _generateLightmapUVs: 0
   _importBlendShapeNames: 1

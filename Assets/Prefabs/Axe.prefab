@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1196397758989594696}
   - component: {fileID: 4204847047801022167}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: ObjectParent
-  m_TagString: Untagged
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,9 +66,9 @@ GameObject:
   - component: {fileID: 3872319588340111123}
   - component: {fileID: 4128444669566033468}
   - component: {fileID: 7455475111760378079}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: ObjectCollider
-  m_TagString: Untagged
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,9 +134,9 @@ GameObject:
   - component: {fileID: 4069320315982721677}
   - component: {fileID: 1425595403564636207}
   - component: {fileID: 8553636679849822933}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Axe
-  m_TagString: Untagged
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,9 +242,9 @@ GameObject:
   - component: {fileID: 4991678006323093475}
   - component: {fileID: 6456358436776598577}
   - component: {fileID: 836694053681886680}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: ObjectVisual
-  m_TagString: Untagged
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,7 +271,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7990195810701947932}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -3283559365835298522, guid: b0ca8b86ea7d7b294b1e101c72d93901, type: 3}
 --- !u!23 &836694053681886680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: -6478536213147159724, guid: b0ca8b86ea7d7b294b1e101c72d93901, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
