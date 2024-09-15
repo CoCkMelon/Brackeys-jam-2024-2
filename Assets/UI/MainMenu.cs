@@ -39,7 +39,8 @@ public class MainMenu : MonoBehaviour
 
 
     public UniversalRenderPipelineAsset urpAsset;
-    public AudioMixer audioMixer;
+    public AudioMixerGroup musicMixerGroup;
+    public AudioMixerGroup soundMixerGroup;
 
     private void Awake()
     {
@@ -358,10 +359,10 @@ public class MainMenu : MonoBehaviour
         // This is where you would actually change the volume in your game
         // Assuming you have an AudioMixer named "MainMixer" with exposed parameters
         // AudioMixer audioMixer = Resources.Load<AudioMixer>("MainMixer");
-        if (audioMixer != null)
+        if (musicMixerGroup != null)
         {
-            audioMixer.SetFloat("SoundVolume", Mathf.Log10(soundVolume / 100) * 20);
-            audioMixer.SetFloat("MusicVolume", Mathf.Log10(musicVolume / 100) * 20);
+            soundMixerGroup.audioMixer.SetFloat("SoundVolume", Mathf.Log10(soundVolume / 100) * 20);
+            musicMixerGroup.audioMixer.SetFloat("MusicVolume", Mathf.Log10(musicVolume / 100) * 20);
         }
 
         // For now, just log for demonstration

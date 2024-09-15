@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public LayerMask groundMask2;
     private Rigidbody currentGroundRigidbody;
     public Transform target;
 
@@ -67,10 +68,10 @@ public class PlayerMovement : MonoBehaviour
         {
             // Calculate movement direction
             Vector3 direction = target.forward * Input.GetAxisRaw("Vertical") + target.right * Input.GetAxisRaw("Horizontal");
-            if(direction.x < 0.001 && direction.x < 0.001 && direction.x < 0.001
-               && Physics.CheckSphere(groundCheck.position, groundDistance)) {
-                StartCoroutine(RechargeStamina());
-            }
+            // if(direction.x < 0.001 && direction.x < 0.001 && direction.x < 0.001
+            //    && Physics.CheckSphere(groundCheck.position, groundDistance, groundMask2)) {
+            //     StartCoroutine(RechargeStamina());
+            // }
 
             // Apply movement speed based on sprinting and stamina
             if (Input.GetKey(KeyCode.LeftShift) && playerStats.currentStamina > 0) {
@@ -99,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
                     playerStats.TakeDamage(10 * Time.deltaTime);
                 }
             } else {
-                playerStats.FreshAir(20);
+                playerStats.FreshAir(5);
                 if(!isGrounded)
                     playerStats.LoseStamina(10);
             }

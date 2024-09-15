@@ -11,6 +11,17 @@ public class WindForLayer : MonoBehaviour
     public float phaseShift = 0f; // Phase shift for the pulse (in radians)
     public float playerForceMul = 0.1f;
 
+    // New variables for controlling sun strength, sky material, and particle system
+    public Light sun;
+    public Material skyMaterial;
+    public ParticleSystem windParticles;
+    public float minSunIntensity = 0.5f; // Minimum sun intensity
+    public float maxSunIntensity = 1f; // Maximum sun intensity
+    public Color minSkyColor = Color.gray; // Minimum sky color
+    public Color maxSkyColor = Color.white; // Maximum sky color
+    public float minFogDensity = 0.1f; // Minimum fog density
+    public float maxFogDensity = 1f; // Maximum fog density
+
     private float pulseTimer = 0f; // Timer to keep track of pulse duration
 
     [SerializeField] float waterLevel = 0f;
@@ -67,5 +78,12 @@ public class WindForLayer : MonoBehaviour
                 }
             }
         }
+
+        // Update sun strength, sky material, and particle system based on wind force
+        float windForceNormalized = WaveFunctions.SquareWave(pulseProgress * 2f * Mathf.PI + phaseShift);
+        sun.intensity = Mathf.Lerp(minSunIntensity, maxSunIntensity, windForceNormalized);
+        skyMaterial.color = Color.Lerp(minSkyColor, maxSkyColor, windForceNormalized);
+        // windParticles.emissionRate = windForceNormalized * 100f; // Adjust emission rate based on wind force
+        windParticles.gameObject.SetActive(windForceNormalized > 0.5f); // Activate particle system when wind force is above a certain threshold
     }
 }

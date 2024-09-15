@@ -36,9 +36,9 @@
             <ui:Button text="Back" name="back-button" class="menu-button" />
             <ui:Label text="Settings will revert in 15 seconds if not confirmed" name="revert-warning" style="display: none;" />
         </ui:VisualElement>
-        <ui:VisualElement name="credits-panel" class="option-panel" style="display: none;">
-            <ui:ScrollView>
-                <ui:Label tabindex="-1" text="some guy - design,&#10;modelling,&#10;programming,&#10;level design,&#10;management&#10;&#10;Bobby - management,&#10;level design&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 568px; width: 473px; -unity-slice-left: 20; -unity-slice-top: 20; -unity-slice-right: 20; -unity-slice-bottom: 20; background-color: rgb(10, 38, 80); font-size: 45px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; color: rgb(221, 221, 221);" />
+        <ui:VisualElement name="credits-panel" class="option-panel" style="display: flex; height: 976px; width: 368px;">
+            <ui:ScrollView style="display: flex; height: 1032px; width: 486px;">
+                <ui:Label tabindex="-1" text="some guy - design,&#10;modelling,&#10;programming,&#10;level design,&#10;management&#10;&#10;Bobby - management,&#10;level design&#10;&#10;Daibreaker501 - programming&#10;&#10;zmand97 - music and sound&#10;&#10;deepseek, claude, o1 - programming&#10;&#10;Others who tried to help, but didn&apos;t, or even left the team.&#10;&#10;Assets:&#10;https://commons.wikimedia.org/wiki/File:Beach_sandy_shore_seamless_ground_texture.jpg&#10;https://sketchfab.com/3d-models/granite-stone-brown-02-585b09b796e745be960f80fdb6bcd4a0&#10;https://sketchfab.com/3d-models/stone-a1119bcc7cf14c5d965dccfc1c852676&#10;https://sketchfab.com/3d-models/antique-motorboat-21bcd49240a54f2b879dd3f91de4fca3&#10;https://freesound.org/people/Artninja/sounds/733864/&#10;https://github.com/nailuj05/FusionWater&#10;...and many others." parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 1560px; width: 4000px; -unity-slice-left: 20; -unity-slice-top: 20; -unity-slice-right: 20; -unity-slice-bottom: 20; background-color: rgb(10, 38, 80); font-size: 45px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; color: rgb(221, 221, 221);" />
                 <ui:Button text="Back" name="back-button2" class="menu-button" />
             </ui:ScrollView>
         </ui:VisualElement>

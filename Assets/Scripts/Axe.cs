@@ -20,7 +20,7 @@ public class Axe : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
-        axeObjectCollider.tag = "Untagged";
+        // axeObjectCollider.tag = "Untagged";
     }
 
     private void OnEnable()
@@ -50,7 +50,7 @@ public class Axe : MonoBehaviour
 
         IEnumerator DisableObjectWithDelay()
         {
-            axeObjectCollider.tag = "Axe";
+            // axeObjectCollider.tag = "Axe";
             //Axe Collider is enabled and animation plays
             axeObjectCollider.SetActive(true);
             anim.SetTrigger("Whack");
@@ -59,7 +59,7 @@ public class Axe : MonoBehaviour
 
             //Axe Collider is disabled
             axeObjectCollider.SetActive(false);
-            axeObjectCollider.tag = "Untagged";
+            // axeObjectCollider.tag = "Untagged";
         }
     }
 }

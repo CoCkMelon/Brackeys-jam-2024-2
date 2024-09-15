@@ -184,7 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   urpAsset: {fileID: 11400000, guid: b58921598a4e8b3a988e00c12822a6fc, type: 2}
-  audioMixer: {fileID: 24100000, guid: 464dc07516da076e2a669e33b82e6227, type: 2}
+  musicMixerGroup: {fileID: 2325778980151797819, guid: 464dc07516da076e2a669e33b82e6227, type: 2}
+  soundMixerGroup: {fileID: -4232387663922298006, guid: 464dc07516da076e2a669e33b82e6227, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
